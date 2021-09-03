@@ -15,13 +15,23 @@
 			<thead>
 			<th>Wish</th> 
 			<th>Category</th> 
+			<th>Author</th>
 			<th colspan="2">Action</th> 
 			</thead>
 			<tbody>
 				{% for w in wishes %}
 					<tr>
 						<td>{{ w.title }}</td>
-						<td><strong>{{ w.categ.name }}</strong></td>
+						{% if w.categ.name is not defined %}
+						<td>
+						<strong></strong>
+						</td>
+						{% else %}
+						<td>
+						<strong>{{ w.categ.name }}</strong>
+						</td>
+						{% endif %}
+						<td>{{ w.auteur}}</td>
 						<td>
 							<a href="{{ path('modifier',{id : w.id })}}" class="btn btn-outline-warning">
 								<i class="fas fa-edit"></i>
