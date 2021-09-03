@@ -3,4 +3,4 @@ Boostrap 5
 Symfony 5.3
 
 maquettes du projet :
-https://jean-frederic-nantes.github.io/bucket-list/
+https://Tom-ENI.github.io/bucket-list/  ( en cours )
